@@ -43,9 +43,6 @@ st.title("YouTube Video Q&A Chatbot")
 st.header("Deep Learning (INFS-778-DT1) - RAG Project")
 st.caption("Muhammad Abdur Rahman")
 
-st.write("Ask questions about the following YouTube video:")
-st.video('https://www.youtube.com/watch?v=cdiD-9MMpb0')
-
 user_question = st.text_input("Your question:")
 
 if user_question:
@@ -56,3 +53,6 @@ if user_question:
         st.write(answer)
 
 st.write("---")
+
+st.write("This chatbot answers questions about the following YouTube video:")
+st.video('https://www.youtube.com/watch?v=cdiD-9MMpb0')
