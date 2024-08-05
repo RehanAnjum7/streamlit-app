@@ -10,6 +10,9 @@ from pinecone import Pinecone
 
 load_dotenv()
 
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+os.environ['PINECONE_API_KEY'] = os.getenv("PINECONE_API_KEY")
+
 pc = Pinecone()
 index_name = "youtube-index"
 index = pc.Index(index_name)
