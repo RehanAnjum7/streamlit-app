@@ -1,6 +1,5 @@
 import streamlit as st
 import os
-from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
 from langchain_openai.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
@@ -8,10 +7,11 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone
 
-load_dotenv()
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-os.environ['PINECONE_API_KEY'] = os.getenv("PINECONE_API_KEY")
+os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
+os.environ['PINECONE_API_KEY'] = PINECONE_API_KEY
 
 pc = Pinecone()
 index_name = "youtube-index"
