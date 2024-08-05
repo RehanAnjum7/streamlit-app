@@ -41,7 +41,8 @@ chain = (
 # Streamlit app
 st.title("YouTube Video Q&A Chatbot")
 st.header("Deep Learning (INFS-778-DT1) - RAG Project")
-st.caption("Muhammad Abdur Rahman")
+st.caption("Created by: Muhammad Abdur Rahman")
+st.caption("Submitted to: Prof. Dr David Zeng")
 
 user_question = st.text_input("Your question:")
 
